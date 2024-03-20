@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<packages>
+    <prometheus>
+        <id verision="0.01">1</id>
+    </prometheus>
+    <funny>
+        <id verision="0.2">2</id>
+    </funny>
+</packages>
