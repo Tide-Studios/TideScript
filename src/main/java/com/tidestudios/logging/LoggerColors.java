@@ -1,5 +1,4 @@
-package com.tidestudios.util;
-
+package com.tidestudios.logging;
 public class LoggerColors {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset

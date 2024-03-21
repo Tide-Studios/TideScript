@@ -3,4 +3,4 @@ com\tidestudios\util\XMLParser.class
 com\tidestudios\base\Config.class
 com\tidestudios\logging\Logger.class
 com\tidestudios\base\TideScript.class
-com\tidestudios\util\LoggerColors.class
+com\tidestudios\logging\LoggerColors.class

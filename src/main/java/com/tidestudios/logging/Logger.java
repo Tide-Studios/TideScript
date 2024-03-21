@@ -1,7 +1,6 @@
 package com.tidestudios.logging;
 
 
-import com.tidestudios.util.LoggerColors;
 
 import java.sql.Time;
 import java.util.ArrayList;
@@ -70,9 +69,11 @@ public class Logger {
         System.out.println(LoggerColors.RED+"["+name+"]"+" [ERROR] "+content+LoggerColors.RESET);
     }
     public void critical(String content){
+
         System.out.println(LoggerColors.RED+LoggerColors.RED_BACKGROUND+"["+name+"] "+"[CRITICAL]"+content+LoggerColors.RESET);
     }
 
 
 
 }
+
