@@ -6,7 +6,7 @@
   </a>
 </p>
 
-```TideScript is a package management software for Lua and Roblox tools built with Lua, Java and Apache Maven```
+```TideScript is a package management software for Lua tools built with Lua, Java, and Apache Maven.```
 
 <p align="center">
 <img src="https://img.shields.io/github/downloads/Tide-Studios/TideScript/total">
@@ -18,7 +18,7 @@
 <p align="center">
   
   <a href="">
-    <img src="https://skillicons.dev/icons?i=lua,java,maven" />
+    <img src="https://skillicons.dev/icons?i=lua,java,maven&theme=light" />
   </a>
 </p>
 
