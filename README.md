@@ -8,12 +8,17 @@
 
 ```TideScript is a package management software for Lua and Roblox tools built with Lua, Java and Apache Maven```
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/Tide-Studios/TideScript/maven.yml)
-
 <p align="center">
-  <a href="https://skillicons.dev">
+<img src="https://img.shields.io/github/downloads/Tide-Studios/TideScript/total">
+<img src="https://img.shields.io/github/last-commit/Tide-Studios/TideScript">
+<img src="https://img.shields.io/github/commit-activity/w/Tide-Studios/TideScript">
+<img src="https://img.shields.io/github/actions/workflow/status/Tide-Studios/TideScript/maven.yml">
+</p>
+  
+<p align="center">
+  
+  <a href="">
     <img src="https://skillicons.dev/icons?i=lua,java,maven" />
-   
   </a>
 </p>
 
