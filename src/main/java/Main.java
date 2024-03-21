@@ -11,8 +11,8 @@ public class Main {
     public static void main(String args[])  {
         TideScript tideScript = new TideScript();
         tideScript.init();
-        tideScript.installFromConfig("C:\\Users\\Jackson\\Desktop\\TideScript\\tests\\test.xml");
+        tideScript.installFromConfig("");
 
-      //  tideScript.installFromConfig("C:\\Users\\Jackson\\Desktop\\TideScript\\tests\\test.xml");
+      //  tideScript.installFromConfig("");
     }
 }
