@@ -1,11 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <packages>
     <prometheus>
-        <id version="0.01">1</id>
+        <id>1</id>
+        <version>1</version>
+        <repo>official</repo>
     </prometheus>
 
     <funny>
-        <id version="0.2">2</id>
-        <url>test</url>
+        <id>2</id>
+        <version>1</version>
+        <repo>official</repo>
     </funny>
 </packages>

@@ -1,39 +1,62 @@
 package com.tidestudios.base;
 
 import com.tidestudios.logging.Logger;
-
+import com.tidestudios.ui.Application;
 import com.tidestudios.util.XMLParser;
 import net.lingala.zip4j.ZipFile;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.luaj.vm2.Globals;
-import org.luaj.vm2.LuaValue;
-import org.luaj.vm2.lib.jse.JsePlatform;
-
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
-import java.util.zip.ZipInputStream;
+import java.util.Arrays;
 
 public class TideScript {
     public static boolean init;
+    public static String projectDirectory;
+    public Application application = new Application();
+    int[] ConfigSettings;
    public Logger logger = new Logger("CORE");
     public TideScript(){
 
     }
-    public void init(){
+    public void disable(){
+        for (int configSetting : ConfigSettings) {
+            if (configSetting == 1001) {
+                logger.info("Setting [showUI]: disabling");
+                application.dispose();
+
+            } else if (configSetting == 1002) {
+
+                logger.info("Saving logs...");
+                logger.saveLogs();
+                logger.info("Setting [saveLogs]: disabling");
+            }
+        }
+    }
+    public void init(int... config){
         if(init){
-            logger.warn("Tidescript already initialized.");
+            logger.warn("TideScript already initialized.");
         }else{
+            ConfigSettings = Arrays.stream(config).toArray(); // Converts all the config settings to an  Array
+            projectDirectory = System.getProperty("user.dir");
+            logger.info("projectDirectory set to: "+projectDirectory);
+            logger.info(config);
+            // Loops all the config settings
+            for (int configSetting : ConfigSettings) {
+                if (configSetting == 1001) {
+                    logger.info("Setting [showUI]: enabled");
+                    application.beginGUI();
+
+                } else if (configSetting == 1002) {
+                    logger.info("Setting [saveLogs] enabled");
+                }
+            }
             init = true;
-            logger.info("Tidescript initialized");
+            logger.info("TideScript fully initialized.");
         }
 
     }
@@ -63,16 +86,21 @@ public class TideScript {
      * @return      the installion
      */
     public void installFromConfig(String configFile) {
-        XMLParser xmlParser = new XMLParser();
-        try {
-            URL fileURL = new File(configFile).toURI().toURL();
-            Document document = xmlParser.parser(fileURL);
-            XMLParser.parseID(document);
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+        if(configFile.isEmpty()){
+            logger.error("Config file path was not set.");
+        }else{
+            XMLParser xmlParser = new XMLParser();
+            try {
+                URL fileURL = new File(configFile).toURI().toURL();
+                Document document = xmlParser.parser(fileURL);
+                XMLParser.parseID(document);
+            } catch (DocumentException e) {
+               logger.error(e.getMessage());
+            } catch (MalformedURLException e) {
+               logger.error(e.getMessage());
+            }
         }
+
 
     }
     public void installToFile(String urlOrigin,String pathname){

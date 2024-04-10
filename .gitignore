@@ -1,5 +1,4 @@
 /TideScript.iml
-/.vscode/
-/lib/
 /out/
 /.idea/
+/src/main/java/Main.java
