@@ -1,7 +1,0 @@
-Main.class
-com\tidestudios\util\XMLParser.class
-com\tidestudios\base\Config.class
-com\tidestudios\logging\Logger.class
-com\tidestudios\base\TideScript.class
-com\tidestudios\logging\LoggerColors.class
-com\tidestudios\ui\Application.class
