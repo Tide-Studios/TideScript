@@ -5,7 +5,7 @@
   </a>
 </p>
 
-```TideScript is a package management software for Lua tools built with Lua, Java, and Apache Maven.```
+```TideScript is a opensource and permanently free package management software for Lua tools built with Lua, Java, and Apache Maven.```
 
 <p align="center">
 <img src="https://img.shields.io/github/downloads/Tide-Studios/TideScript/total">
