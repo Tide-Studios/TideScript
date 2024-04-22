@@ -9,7 +9,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/github/downloads/Tide-Studios/TideScript/total">
-<img src="https://img.shields.io/github/actions/workflow/status/Tide-Studios/TideScript/.github%2Fworkflows%2Fmaven.yml">
+<img src="https://img.shields.io/github/actions/workflow/status/Tide-Studios/TideScript/.github/workflows/maven.yml">
 <img src="https://img.shields.io/github/license/Tide-Studios/TideScript">
 
 <p align="center">
