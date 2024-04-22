@@ -18,3 +18,5 @@
     <img src="https://skillicons.dev/icons?i=lua,java,maven&theme=light" />
   </a>
 </p>
+
+## Basic Setup
