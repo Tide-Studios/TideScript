@@ -2,13 +2,15 @@
 <packages>
     <prometheus>
         <id>1</id>
-        <version>1</version>
+        <version>2.0</version>
+        <type>file</type>
         <repo>official</repo>
     </prometheus>
 
     <funny>
         <id>2</id>
-        <version>1</version>
+        <version>1.0</version>
+        <type>project</type>
         <repo>official</repo>
     </funny>
 </packages>

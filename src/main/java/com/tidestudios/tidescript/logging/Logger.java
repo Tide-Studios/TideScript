@@ -1,14 +1,20 @@
-package com.tidestudios.logging;
+package com.tidestudios.tidescript.logging;
 
 
-import com.tidestudios.base.TideScript;
+import com.google.common.cache.*;
+import com.google.common.graph.Graph;
+import com.tidestudios.tidescript.core.TideScript;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.security.Key;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 
 public class Logger {
@@ -24,52 +30,70 @@ public class Logger {
     }
 
     public void setCurrentLoggingTime(){
-        currentLoggingTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("M/dd/y h:mm:s a"));
+        currentLoggingTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("M/dd/y h:mm:ss a"));
     }
 
+  @Test
     public void saveLogs(){
-        for(int i=0;i<previousLogs.size();i++){
 
-                System.out.println(TideScript.projectDirectory);
+        for(int i=0;i<previousLogs.size();i++){
                 File file = new File(TideScript.projectDirectory+"/TideScriptLog-"+FileLoggingTime+".txt");
 
-            try {
-                Files.write(file.toPath(),previousLogs);
-            } catch (IOException e) {
-                error(e.getMessage());
-            }
-
+                    try {
+                        Files.write(file.toPath(),previousLogs);
+                    } catch (IOException e) {
+                        error(e.getMessage());
+                    }
 
         }
 
     }
     public void trace(Object content){
-        setCurrentLoggingTime();
-        System.out.println(LoggerColors.WHITE+currentLoggingTime+" ["+name+"] "+"[TRACE] "+content+LoggerColors.RESET);
-        addToLogs(currentLoggingTime+" ["+name+"] "+"[TRACE] "+content);
+            setCurrentLoggingTime();
+            System.out.println(LoggerColors.WHITE+currentLoggingTime+" ["+name+"] "+"[TRACE] "+content+LoggerColors.RESET);
+            addToLogs(currentLoggingTime+" ["+name+"] "+"[TRACE] "+content);
+
+
     }
     public void warn(Object content){
+
         setCurrentLoggingTime();
         System.out.println(LoggerColors.YELLOW+currentLoggingTime+" ["+name+"] "+"[WARN] "+content+LoggerColors.RESET);
         addToLogs(currentLoggingTime+" ["+name+"] "+"[WARN] "+content);
     }
     public static void addToLogs(Object log){
-        Logger.previousLogs.add(log);
+            Logger.previousLogs.add(log);
+
+
     }
     public void info(Object content){
-        setCurrentLoggingTime();
-        System.out.println(LoggerColors.BLUE+currentLoggingTime+" ["+name+"]"+" [INFO] "+content+LoggerColors.RESET);
-        addToLogs(currentLoggingTime+" ["+name+"] "+"[INFO] "+content);
+
+            setCurrentLoggingTime();
+            System.out.println(LoggerColors.BLUE+currentLoggingTime+" ["+name+"]"+" [INFO] "+content+LoggerColors.RESET);
+            addToLogs(currentLoggingTime+" ["+name+"] "+"[INFO] "+content);
+
     }
     public void error(Object content){
-        setCurrentLoggingTime();
-        System.out.println(LoggerColors.RED+currentLoggingTime+" ["+name+"]"+" [ERROR] "+content+LoggerColors.RESET);
-        addToLogs(currentLoggingTime+" ["+name+"] "+"[ERROR] "+content);
+
+            setCurrentLoggingTime();
+            System.out.println(LoggerColors.RED+currentLoggingTime+" ["+name+"]"+" [ERROR] "+content+LoggerColors.RESET);
+            addToLogs(currentLoggingTime+" ["+name+"] "+"[ERROR] "+content);
+
     }
     public void critical(Object content){
-        setCurrentLoggingTime();
-        System.out.println(LoggerColors.RED+currentLoggingTime+LoggerColors.RED_BACKGROUND+"["+name+"] "+"[CRITICAL]"+content+LoggerColors.RESET);
-        addToLogs(currentLoggingTime+" ["+name+"] "+"[CRITICAL] "+content);
+
+            setCurrentLoggingTime();
+            System.out.println(LoggerColors.RED+currentLoggingTime+LoggerColors.RED_BACKGROUND+"["+name+"] "+"[CRITICAL]"+content+LoggerColors.RESET);
+            addToLogs(currentLoggingTime+" ["+name+"] "+"[CRITICAL] "+content);
+
+
+    }
+    public void customLog(String logType, LoggerColors color,Object content,LoggerColors... extracolors){
+
+            setCurrentLoggingTime();
+            System.out.println(color+currentLoggingTime+extracolors+"["+name+"]"+"["+logType+"]"+content+LoggerColors.RESET);
+            addToLogs(currentLoggingTime+"["+name+"]"+logType+content);
+
     }
     public static class LoggerColors{
         // Reset
