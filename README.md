@@ -5,7 +5,7 @@
   </a>
 </p>
 
-```TideScript is an opensource and permanently free utility software for Java tools built with Java, and Apache Maven.```
+```TideScript is an opensource and permanently free utility software for Java and Scala tools built with Java, and Apache Maven.```
 
 <p align="center">
 <img src="https://img.shields.io/github/downloads/Tide-Studios/TideScript/total">
@@ -15,7 +15,7 @@
 <p align="center">
 
   <a href="">
-    <img src="https://skillicons.dev/icons?i=lua,java,maven&theme=light" />
+    <img src="https://skillicons.dev/icons?i=scala,java,maven&theme=light" />
   </a>
 </p>
 
