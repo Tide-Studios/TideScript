@@ -23,7 +23,10 @@
 
 
 ## Features
-
+> Simple and Efficient logging with Encryption and File logs
+> Ability to create plugins
+## Docs
+https://tide-studios.github.io/TideScript/
 ## Language Ports
 
 ## Project Development
