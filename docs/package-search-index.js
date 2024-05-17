@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.tidestudios.tidescript.core"},{"l":"com.tidestudios.tidescript.logging"},{"l":"com.tidestudios.tidescript.plugin"},{"l":"com.tidestudios.tidescript.util"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.tidestudios.tidescript.util"}];updateSearchResults();
