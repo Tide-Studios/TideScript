@@ -20,11 +20,19 @@
 </p>
 
 ## Basic Setup
+```java
+TideScript tideScript = new TideScript();
 
-
+       tideScript.disable();
+```
+### Basic Logging Functions
+```java
+tidescript.
+```
 ## Features
 > Simple and Efficient logging with Encryption and File logs
-> Ability to create plugins
+> Ability to identify your project runtime.
+> Ability to create plugins.
 ## Docs
 https://tide-studios.github.io/TideScript/
 ## Language Ports
