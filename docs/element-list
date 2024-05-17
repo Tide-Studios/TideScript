@@ -1,1 +1,5 @@
+unnamed package
 com.tidestudios.tidescript.core
+com.tidestudios.tidescript.logging
+com.tidestudios.tidescript.plugin
+com.tidestudios.tidescript.util
