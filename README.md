@@ -23,15 +23,22 @@
 ```java
 TideScript tideScript = new TideScript();
 
-       tideScript.disable();
+ tideScript.disable();
 ```
 ### Basic Logging Functions
+This is an example of all the tidescript logging functions.
 ```java
-tidescript.
+  tideScript.logger.trace("TideScript says trace");
+  tideScript.logger.info("TideScript says info");
+  tideScript.logger.warn("TideScript says warn");
+  tideScript.logger.error("TideScript says error");
+  tideScript.logger.critical("TideScript says critical");
 ```
 ## Features
 > Simple and Efficient logging with Encryption and File logs
-> Ability to identify your project runtime.
+> 
+> Ability to identify your project runtime and availability to be called globally.
+> 
 > Ability to create plugins.
 ## Docs
 https://tide-studios.github.io/TideScript/
