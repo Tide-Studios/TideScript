@@ -35,14 +35,15 @@ This is an example of all the tidescript logging functions.
   tideScript.logger.critical("TideScript says critical");
 ```
 ## Features
-> Simple and Efficient logging with Encryption and File logs
+> Simple and Efficient logging with Encryption and different file types supported such as HTML, Text
 > 
 > Ability to identify your project runtime and availability to be called globally.
 > 
 > Ability to create plugins.
 ## Docs
-https://tide-studios.github.io/TideScript/
 ## Language Ports
+Scala | 🟨
+C++ | 🟥
 
 ## Project Development
 https://trello.com/b/04zdzF1K/tidescript
