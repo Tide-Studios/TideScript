@@ -42,8 +42,6 @@ This is an example of all the tidescript logging functions.
 > Ability to create plugins.
 ## Docs
 ## Language Ports
-Scala | 🟨
-C++ | 🟥
-
+No current language port is planned or being worked on.
 ## Project Development
 https://trello.com/b/04zdzF1K/tidescript
