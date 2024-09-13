@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"com.tidestudios.tidescript.util","c":"PrinterUtil","l":"print(File)","u":"print(java.io.File)"},{"p":"com.tidestudios.tidescript.util","c":"PrinterUtil","l":"PrinterUtil()","u":"%3Cinit%3E()"}];updateSearchResults();
