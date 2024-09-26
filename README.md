@@ -6,6 +6,7 @@
 </p>
 
 ```TideScript is an opensource and permanently free logging software for Java tools built with Java, and Apache Maven.```
+### **This project is under heavy development, many features may not have solid documentation**
 
 <p align="center">
 <img src="https://img.shields.io/github/downloads/Tide-Studios/TideScript/total">
