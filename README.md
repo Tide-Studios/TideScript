@@ -23,8 +23,6 @@
 ## Basic Setup
 ```java
 TideScript tideScript = new TideScript();
-
- tideScript.disable();
 ```
 ### Basic Logging Functions
 This is an example of all the tidescript logging functions.
