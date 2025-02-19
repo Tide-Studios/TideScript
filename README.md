@@ -27,17 +27,15 @@ TideScript tideScript = new TideScript();
 ### Basic Logging Functions
 This is an example of all the tidescript logging functions.
 ```java
-  tideScript.logger.trace("TideScript says trace");
-  tideScript.logger.info("TideScript says info");
-  tideScript.logger.warn("TideScript says warn");
-  tideScript.logger.error("TideScript says error");
-  tideScript.logger.critical("TideScript says critical");
+  Logger logger = new Logger("Console");
+  logger.trace("TideScript says trace");
+  logger.info("TideScript says info");
+  logger.warn("TideScript says warn");
+  logger.error("TideScript says error");
+  logger.critical("TideScript says critical");
 ```
 ## Features
-> Simple and Efficient logging with Encryption and different file types supported such as HTML, Text
-> 
-> Ability to identify your project runtime and availability to be called globally.
-> 
+> Lightweight and Efficient logging with Encryption and different file types supported such as HTML, Text
 > Ability to create plugins.
 ## Docs
 ## Language Ports
